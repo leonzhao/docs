@@ -19,7 +19,7 @@
 > validation.pipe.ts
 
 ```typescript
-import { PipeTransform, Pipe, ArgumentMetadata } from '@nestjs/common';
+import { PipeTransform, Injectable, ArgumentMetadata } from '@nestjs/common';
 
 @Injectable()
 export class ValidationPipe implements PipeTransform<any> {
@@ -113,7 +113,7 @@ export class CreateCatDto {
 > validation.pipe.ts
 
 ```typescript
-import { PipeTransform, Pipe, ArgumentMetadata, BadRequestException } from '@nestjs/common';
+import { PipeTransform, Injectable, ArgumentMetadata, BadRequestException } from '@nestjs/common';
 import { validate } from 'class-validator';
 import { plainToClass } from 'class-transformer';
 
@@ -190,7 +190,7 @@ bootstrap();
 > parse-int.pipe.ts
 
 ```typescript
-import { PipeTransform, Pipe, ArgumentMetadata, HttpStatus, BadRequestException } from '@nestjs/common';
+import { PipeTransform, Injectable, ArgumentMetadata, HttpStatus, BadRequestException } from '@nestjs/common';
 
 @Injectable()
 export class ParseIntPipe implements PipeTransform<string> {
